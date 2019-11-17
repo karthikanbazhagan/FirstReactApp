@@ -1,0 +1,264 @@
+html, body, .app, .main {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  margin: -4px auto;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.slider .slider-wrapper {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
+  .slider .slider-wrapper .slide {
+      display: inline-block;
+      white-space: nowrap;
+      height: 100%;
+      width: 100%;
+    }
+
+.slider-right-arrow, .slider-left-arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+}
+.slider-right-arrow:hover, .slider-left-arrow:hover {
+    transition: transform ease-in .1s;
+    transform: scale(1.1)
+  }
+
+.slider-right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+}
+.slider-right-arrow.img {
+    transform: translate(2px, 0);
+  }
+  .slider-right-arrow.img:focus {
+      outline: 0;
+    }
+
+.slider-left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.slider-left-arrow.img {
+    transform: translate(-2px, 0);
+}
+.slider-left-arrow.img:focus {
+    outline: 0;
+  }
+
+.dots-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 9999;
+  padding: 5px 0;
+}
+  .dots-container .dot {
+    background: #222;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  .dots-container .dot.active {
+    background: #fff;
+  }
+
+.autoplay {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  background: #ddd;
+  color: #333;
+  font-size: 15px;
+}
+  .autoplay.p {
+    margin: 0
+  }
+
+  /* Top Navigation Bar */
+
+  .top-nav{
+/*position: fixed;*/
+top:0;
+right: 0;
+left:0;
+margin: 0;
+
+display: block;
+z-index: 9999;
+
+width: 100%;
+max-height: 48px;
+min-height: 44px;
+min-width: 1024px;
+
+background:  rgba(0,0,0,0.8);
+
+
+font-size: 17px;
+font-family: "SF Pro Text","Myriad Set Pro","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+
+  }
+  .top-nav .top-navigation-bar{
+    /*background:  #96151d;
+    display: inline-block;
+    cursor: pointer; */
+    margin: 0 auto;
+    max-width: 980px;
+  }
+
+.top-navigation-bar ul {
+  text-align: justify;
+  /*
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+    width: auto; */
+}
+
+.top-navigation-bar li {
+    /*float: left;*/
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 1;
+    vertical-align: top;  
+    
+}
+
+.top-navigation-bar li a {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    background-size: cover;
+    width: auto;
+    max-width: 47.6px;
+    
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 10px;
+    height: 44px;
+    opacity: 1;
+    white-space: nowrap;
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    outline-offset: -7px;
+    background-size: 28px 44px;
+
+    
+    color: white;
+    text-align: center;
+    /*padding: 15px 20px;*/
+    text-decoration: none;
+}
+
+.top-navigation-bar li a span{
+
+  clip: rect(5px, 5px, 5px, 5px);
+  clip-path: inset(0px 0px .9% .9%);
+  overflow: hidden;
+  height: auto;
+  width: auto;
+  padding: 0;
+  border: 0;
+  top: 50%;
+  color: white;
+
+  
+  
+}
+
+
+/* Change the link color to #111 (black) on hover */
+.top-navigation-bar li a:hover {
+    background-color: #333;
+}
+
+/* Grid */
+.grid-container{
+  padding: 10px;
+  margin-top: 100px;
+  display: grid;
+  justify-content: center;
+  grid-gap:25px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+}
+
+.grid-item
+{
+  background: #D4C8C9;
+  height: 290px;
+  width: 420px;
+}
+
+/* Footer */
+
+.footer{
+  background:  #131a22;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 5px;
+}
+
+.footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.footer li {
+  float: right;
+}
+
+.footer li a , .footer li span{
+  display: block;
+  color: white;
+  
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.footer li a:hover {
+  text-decoration: underline;
+}
